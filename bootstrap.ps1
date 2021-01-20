@@ -1,7 +1,6 @@
 #requires -v 3
 #set-executionpolicy unrestricted -s cu
 #invoke-expression (new-object net.webclient).downloadstring('https://raw.githubusercontent.com/Kreijstal/dotfiles/master/bootstrap.ps1')
-}
 if (Get-Command scoop -errorAction SilentlyContinue)
 {
 	write-host "scoop already installed"
