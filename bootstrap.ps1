@@ -9,7 +9,7 @@ if (Get-Command scoop -errorAction SilentlyContinue)
 }
 
 # utility
-scoop install git git-lfs 7zip curl sudo openssh openssl coreutils grep sed less which zip unzip tar gzip make
+scoop install aria2 git git-lfs 7zip curl sudo openssl coreutils grep sed less which zip unzip tar gzip make
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 
 scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
@@ -30,9 +30,12 @@ npm install -g serverless
 
 # entertainment
 scoop install vlc
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+
 
 # vim
-scoop install vim
+scoop install neovim
 #'
 #set ff=unix
 #set cindent
