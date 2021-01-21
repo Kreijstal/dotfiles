@@ -15,8 +15,8 @@ scoop install aria2 git git-lfs 7zip curl sudo openssl coreutils grep sed less w
 
 scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 # programming languages
-scoop install python ruby go openjdk flatc protobuf nvm dotnet nuget
-
+scoop install python ruby go nvm dotnet nuget
+#flatc protobuf openjdk
 # rancher
 #scoop install rancher-compose
 
@@ -27,7 +27,7 @@ scoop install python ruby go openjdk flatc protobuf nvm dotnet nuget
 
 # node
 nvm install latest
-npm install -g serverless
+#npm install -g serverless
 
 # entertainment
 scoop install vlc
