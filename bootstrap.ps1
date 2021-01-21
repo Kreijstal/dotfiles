@@ -18,12 +18,12 @@ scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
 scoop install python ruby go openjdk flatc protobuf nvm dotnet nuget
 
 # rancher
-scoop install rancher-compose
+#scoop install rancher-compose
 
 # dev tools
-scoop install vagrant winmerge hugo glide vscode ngrok filezilla insomnia postman terraform
-go get -u github.com/remind101/assume-role
-go get -u github.com/golang/dep/cmd/dep
+#scoop install vagrant winmerge hugo glide vscode ngrok filezilla insomnia postman terraform
+#go get -u github.com/remind101/assume-role
+#go get -u github.com/golang/dep/cmd/dep
 
 # node
 nvm install latest
