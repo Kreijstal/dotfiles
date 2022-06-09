@@ -5,17 +5,20 @@ if (Get-Command scoop -errorAction SilentlyContinue)
 {
 	write-host "scoop already installed"
 } else {
-	set-executionpolicy unrestricted -s cu
+	set-executionpolicy unrestricted -s cu #must be manual for now
 	invoke-expression (new-object net.webclient).downloadstring('https://get.scoop.sh')
 }
 
 # utility
-scoop install aria2 git git-lfs 7zip curl sudo openssl coreutils grep sed less which zip unzip tar gzip make
-[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
-
+scoop install aria2 git-with-openssh
 scoop bucket add extras https://github.com/lukesampson/scoop-extras.git
-# programming languages
-scoop install python ruby go nvm dotnet nuget
+scoop bucket add nirsoft
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+scoop install everything fzf mupdf msys2 nvm deno notepadplusplus neovim vlc gtools  heidisql   ImHex  
+[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
+nvm install latest
+#mingw
+#pacman -Syuu $MINGW_PACKAGE_PREFIX-blender $MINGW_PACKAGE_PREFIX-inkscape $MINGW_PACKAGE_PREFIX-gimp
 #flatc protobuf openjdk
 # rancher
 #scoop install rancher-compose
