@@ -8,4 +8,4 @@ add_cd_path() {
     pathadd "$(pwd)"
 }
 pathadd ~/bin
-pathadd ~/local/share/junest/bin
+pathadd ~/.local/share/junest/bin
