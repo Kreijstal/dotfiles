@@ -9,3 +9,4 @@ add_cd_path() {
 }
 pathadd ~/bin
 pathadd ~/.local/share/junest/bin
+pathadd ~/.local/bin
